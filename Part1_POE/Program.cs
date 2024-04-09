@@ -39,5 +39,15 @@ internal class ProgramPart1
                 unitsOfMeasurements = unitsMe,
             };
         }
+
+        Console.WriteLine("Enter the number of steps required for this recipe");
+        int numSteps = Convert.ToInt32(Console.ReadLine());
+
+        string[] steps = new string[numSteps];
+        for(int i = 0; i < numSteps; i++) 
+        {
+            Console.WriteLine("Step " + (i + 1) + " : ");
+            steps[i] = Console.ReadLine();
+        }
     }
 }
