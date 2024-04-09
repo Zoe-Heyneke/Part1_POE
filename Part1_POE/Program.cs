@@ -49,5 +49,37 @@ internal class ProgramPart1
             Console.WriteLine("Step " + (i + 1) + " : ");
             steps[i] = Console.ReadLine();
         }
+
+        bool continueMenu = true;
+
+        while( continueMenu ) 
+        {
+            Console.WriteLine("(D) Display full recipe");
+            Console.WriteLine("(S) Scale recipe");
+            Console.WriteLine("(R) Reset recipe");
+            Console.WriteLine("(C) Clear data to enter a new recipe");
+            Console.WriteLine("(E) Exit");
+
+            string menu = Console.ReadLine();
+
+            switch (menu)
+            {
+                case "D":
+                    //
+                    break;
+                case "S":
+                    //
+                    break;
+                case "R":
+                    //
+                    break;
+                case "C":
+                    //
+                    break;
+                case "E":
+                    //
+                    break;
+            }
+        }
     }
 }
