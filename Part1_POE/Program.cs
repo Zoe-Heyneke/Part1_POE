@@ -21,6 +21,8 @@ internal class ProgramPart1
         int numIng = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("The number of ingredients chosen are: " + numIng);
 
+        Ingredients[] ingredients = new Ingredients[numIng];
+
         for (int i = 0; i < numIng; i++) 
         {
             Console.WriteLine("Enter the name of the ingredient");
@@ -29,6 +31,13 @@ internal class ProgramPart1
             double quantityIng = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter the unit of measurement of the ingredient");
             string unitsMe = Console.ReadLine();
+
+            ingredients[i] = new Ingredients
+            {
+                name = nameIng,
+                quantity = quantityIng,
+                unitsOfMeasurements = unitsMe,
+            };
         }
     }
 }
