@@ -11,6 +11,12 @@ internal class ProgramPart1
 
     private static void Main(string[] args)
     {
-        
+        RecipeDetails();
+    }
+
+    public static void RecipeDetails()
+    {
+        Console.WriteLine("Enter the followig details for a single recipe");
+        Console.WriteLine("Enter the number of ingredient")
     }
 }
