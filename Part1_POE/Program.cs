@@ -81,6 +81,32 @@ internal class ProgramPart1
                     break;
                 case "S":
                     //
+                    Console.WriteLine("Choose a scaling factor (enter words)");
+                    Console.WriteLine("(Half) = 0.5");
+                    Console.WriteLine("(Double) = 2");
+                    Console.WriteLine("(Triple) = 3");
+                    Console.WriteLine("(B) Go back");
+
+                    string scalingFactor = Console.ReadLine();
+
+                    switch(scalingFactor)
+                    {
+                        case "Half":
+                            //
+                            break;
+                        case "Double":
+                            //
+                            break;
+                        case "Triple":
+                            //
+                            break;
+                        case "B":
+                            //
+                            break;
+                        default:
+                            Console.WriteLine("Invalid option entered, try again");
+                            break;
+                    }
                     break;
                 case "R":
                     //
