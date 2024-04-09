@@ -151,6 +151,7 @@ internal class ProgramPart1
                         steps[i] = "";
                     }
                     Console.WriteLine("Data has been cleared. Enter new recipe details");
+                    RecipeDetails();
                     break;
                 case "E":
                     //
