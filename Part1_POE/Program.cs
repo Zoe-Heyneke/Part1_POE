@@ -50,6 +50,12 @@ internal class ProgramPart1
             steps[i] = Console.ReadLine();
         }
 
+        double[] orgQuantities = new double[numIng];
+        for(int i = 0; i < numIng; i++)
+        {
+            orgQuantities[i] = ingredients[i].quantity;
+        }
+
         bool continueMenu = true;
 
         while( continueMenu ) 
@@ -138,7 +144,11 @@ internal class ProgramPart1
                     break;
                 case "R":
                     //
-
+                    for(int i = 0; i < numIng; i++)
+                    {
+                        ingredients[i].quantity = orgQuantities[i];
+                    }
+                    Console.WriteLine("Recipe has been reset to original values");
                     break;
                 case "C":
                     //
