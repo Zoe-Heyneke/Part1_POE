@@ -66,6 +66,18 @@ internal class ProgramPart1
             {
                 case "D":
                     //
+                    Console.WriteLine("******** Recipe details ********");
+                    Console.WriteLine("Ingredients:");
+                    foreach (var ingredient in ingredients)
+                    {
+                        Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
+                    }
+                    Console.WriteLine("Steps:");
+                    for (int i = 0; i < numSteps; i++)
+                    {
+                        Console.WriteLine("Step " + (i + 1) + ": " + steps[i]);
+                    }
+
                     break;
                 case "S":
                     //
