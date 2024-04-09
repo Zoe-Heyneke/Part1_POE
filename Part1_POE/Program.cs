@@ -111,7 +111,6 @@ internal class ProgramPart1
                             {
                                 ingredient.quantity = ingredient.quantity * 3;
                             }
-
                             break;
                         case "B":
                             //
