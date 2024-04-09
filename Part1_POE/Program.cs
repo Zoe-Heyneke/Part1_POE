@@ -93,15 +93,29 @@ internal class ProgramPart1
                     {
                         case "Half":
                             //
+                            foreach(var ingredient in ingredients)
+                            {
+                                ingredient.quantity = ingredient.quantity * 0.5;
+                            }
                             break;
                         case "Double":
                             //
+                            foreach (var ingredient in ingredients)
+                            {
+                                ingredient.quantity = ingredient.quantity * 2;
+                            }
                             break;
                         case "Triple":
                             //
+                            foreach (var ingredient in ingredients)
+                            {
+                                ingredient.quantity = ingredient.quantity * 3;
+                            }
+
                             break;
                         case "B":
                             //
+                            continueMenu = true;
                             break;
                         default:
                             Console.WriteLine("Invalid option entered, try again");
