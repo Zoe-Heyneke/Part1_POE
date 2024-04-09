@@ -16,7 +16,8 @@ internal class ProgramPart1
 
     public static void RecipeDetails()
     {
-        Console.WriteLine("Enter the followig details for a single recipe");
+        Console.WriteLine("***** Welcome to the Recipe Application *****");
+        Console.WriteLine("Please enter the followig details for a single recipe");
         Console.WriteLine("Enter the number of ingredients: ");
         int numIng = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("The number of ingredients chosen are: " + numIng);
@@ -25,11 +26,11 @@ internal class ProgramPart1
 
         for (int i = 0; i < numIng; i++) 
         {
-            Console.WriteLine("Enter the name of the ingredient");
+            Console.WriteLine("Enter the name of the ingredient: ");
             string nameIng = Console.ReadLine();
-            Console.WriteLine("Enter the quantity of the ingredient");
+            Console.WriteLine("Enter the quantity (amount in numbers) of the ingredient: ");
             double quantityIng = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the unit of measurement of the ingredient");
+            Console.WriteLine("Enter the unit of measurement (measurement in words - for example teaspoon, gram, cup) of the ingredient:");
             string unitsMe = Console.ReadLine();
 
             ingredients[i] = new Ingredients
@@ -40,7 +41,7 @@ internal class ProgramPart1
             };
         }
 
-        Console.WriteLine("Enter the number of steps required for this recipe");
+        Console.WriteLine("Enter the number of steps required for this recipe: ");
         int numSteps = Convert.ToInt32(Console.ReadLine());
 
         string[] steps = new string[numSteps];
@@ -60,6 +61,7 @@ internal class ProgramPart1
 
         while( continueMenu ) 
         {
+            Console.WriteLine("Choose a menu option (in the brackets) that you want to perform on the recipe ");
             Console.WriteLine("(D) Display full recipe");
             Console.WriteLine("(S) Scale recipe");
             Console.WriteLine("(R) Reset recipe");
@@ -73,12 +75,12 @@ internal class ProgramPart1
                 case "D":
                     //
                     Console.WriteLine("******** Recipe details ********");
-                    Console.WriteLine("Ingredients:");
+                    Console.WriteLine("---- Ingredients: ----");
                     foreach (var ingredient in ingredients)
                     {
-                        Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
+                        Console.WriteLine(ingredient.name + "---- " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
                     }
-                    Console.WriteLine("Steps:");
+                    Console.WriteLine("---- Steps: ----");
                     for (int i = 0; i < numSteps; i++)
                     {
                         Console.WriteLine("Step " + (i + 1) + ": " + steps[i]);
@@ -87,7 +89,7 @@ internal class ProgramPart1
                     break;
                 case "S":
                     //
-                    Console.WriteLine("Choose a scaling factor (enter words)");
+                    Console.WriteLine("Choose a scaling factor (enter the following scaling words in the brackets)");
                     Console.WriteLine("(Half) = 0.5");
                     Console.WriteLine("(Double) = 2");
                     Console.WriteLine("(Triple) = 3");
@@ -103,7 +105,7 @@ internal class ProgramPart1
                             {
                                 ingredient.quantity = ingredient.quantity * 0.5;
                             }
-                            Console.WriteLine("Scaled recipe");
+                            Console.WriteLine("---- Scaled recipe ----");
                             foreach (var ingredient in ingredients)
                             {
                                 Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
@@ -115,7 +117,7 @@ internal class ProgramPart1
                             {
                                 ingredient.quantity = ingredient.quantity * 2;
                             }
-                            Console.WriteLine("Scaled recipe");
+                            Console.WriteLine("---- Scaled recipe ----");
                             foreach (var ingredient in ingredients)
                             {
                                 Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
@@ -127,7 +129,7 @@ internal class ProgramPart1
                             {
                                 ingredient.quantity = ingredient.quantity * 3;
                             }
-                            Console.WriteLine("Scaled recipe");
+                            Console.WriteLine("---- Scaled recipe ----");
                             foreach (var ingredient in ingredients)
                             {
                                 Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
@@ -164,9 +166,11 @@ internal class ProgramPart1
                     RecipeDetails();
                     break;
                 case "E":
-                //
-                default:
+                    //
                     continueMenu = false;
+                    break;
+                default:
+                    Console.WriteLine("Invalid option entered, try again");
                     break;
             }
         }
