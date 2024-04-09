@@ -138,9 +138,19 @@ internal class ProgramPart1
                     break;
                 case "R":
                     //
+
                     break;
                 case "C":
                     //
+                    for (int i = 0; i < numIng; i++)
+                    {
+                        ingredients[i].quantity = 0;
+                    }
+                    for (int i = 0; i < numSteps; i++)
+                    {
+                        steps[i] = "";
+                    }
+                    Console.WriteLine("Data has been cleared. Enter new recipe details");
                     break;
                 case "E":
                     //
