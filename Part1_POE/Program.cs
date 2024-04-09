@@ -97,6 +97,11 @@ internal class ProgramPart1
                             {
                                 ingredient.quantity = ingredient.quantity * 0.5;
                             }
+                            Console.WriteLine("Scaled recipe");
+                            foreach (var ingredient in ingredients)
+                            {
+                                Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
+                            }
                             break;
                         case "Double":
                             //
@@ -104,12 +109,22 @@ internal class ProgramPart1
                             {
                                 ingredient.quantity = ingredient.quantity * 2;
                             }
+                            Console.WriteLine("Scaled recipe");
+                            foreach (var ingredient in ingredients)
+                            {
+                                Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
+                            }
                             break;
                         case "Triple":
                             //
                             foreach (var ingredient in ingredients)
                             {
                                 ingredient.quantity = ingredient.quantity * 3;
+                            }
+                            Console.WriteLine("Scaled recipe");
+                            foreach (var ingredient in ingredients)
+                            {
+                                Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
                             }
                             break;
                         case "B":
