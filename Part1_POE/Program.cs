@@ -164,7 +164,9 @@ internal class ProgramPart1
                     RecipeDetails();
                     break;
                 case "E":
-                    //
+                //
+                default:
+                    continueMenu = false;
                     break;
             }
         }
