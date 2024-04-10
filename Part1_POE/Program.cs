@@ -87,11 +87,11 @@ internal class ProgramPart1
             steps[i] = Console.ReadLine();
         }
 
-        ////clear console screen
+        //clear console screen
         Console.Clear();
 
         //create a new array to store original data entered by user
-        //new array of original ingredients is set to equally assign to the array of ingredients stored by the user's input (user dat stored as original values to refer back to reset reipe to original values)
+        //new array of original ingredients is set to equally assign to the array of ingredients stored by the user's input (user data stored as original values to refer back to reset reipe to original values)
         double[] orgQuantities = new double[numIng];
         for(int i = 0; i < numIng; i++)
         {
@@ -119,6 +119,9 @@ internal class ProgramPart1
             Console.ForegroundColor = ConsoleColor.White;       //change text color to white
             string menu = Console.ReadLine();
 
+            //clear console screen
+            Console.Clear();
+
             //switch case menu to perform each option chosen
             switch (menu)
             {
@@ -132,7 +135,7 @@ internal class ProgramPart1
                     foreach (var ingredient in ingredients)
                     {
                         Console.ForegroundColor = ConsoleColor.White;       //change text color to white
-                        Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
+                        Console.WriteLine(ingredient.name + " -> " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
                     }
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;       //change text color to purple
                     Console.WriteLine("---- Steps: ----");
@@ -142,8 +145,8 @@ internal class ProgramPart1
                         Console.ForegroundColor = ConsoleColor.White;       //change text color to white
                         Console.WriteLine("Step " + (i + 1) + ": " + steps[i]);
                     }
-                    //fix error
-                    //clear console screen
+                    
+                    //clear console screen n/a
                     //Console.Clear();
                     break;
                 case "S":
@@ -176,7 +179,7 @@ internal class ProgramPart1
                             foreach (var ingredient in ingredients)
                             {
                                 Console.ForegroundColor = ConsoleColor.White;       //change text color to white
-                                Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
+                                Console.WriteLine(ingredient.name + " -> " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
                             }
                             break;
                         case "Double":
@@ -186,13 +189,13 @@ internal class ProgramPart1
                             {
                                 ingredient.quantity = ingredient.quantity * 2;
                             }
-                            ////display new scaled values of recipe ingredients to ease oprations so that user doesn't have to enter D again to display full recipe, but user can choose D again to display full recipe
+                            //display new scaled values of recipe ingredients to ease oprations so that user doesn't have to enter D again to display full recipe, but user can choose D again to display full recipe
                             Console.ForegroundColor = ConsoleColor.DarkMagenta;       //change text color to purple
                             Console.WriteLine("---- Scaled recipe ----");
                             foreach (var ingredient in ingredients)
                             {
                                 Console.ForegroundColor = ConsoleColor.White;       //change text color to white
-                                Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
+                                Console.WriteLine(ingredient.name + " -> " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
                             }
                             break;
                         case "Triple":
@@ -208,11 +211,10 @@ internal class ProgramPart1
                             foreach (var ingredient in ingredients)
                             {
                                 Console.ForegroundColor = ConsoleColor.White;       //change text color to white
-                                Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
+                                Console.WriteLine(ingredient.name + " -> " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
                             }
 
-                            //fix error
-                            //clear console screen
+                            //clear console screen n/a
                             //Console.Clear();
                             break;
                         case "B":
@@ -235,10 +237,9 @@ internal class ProgramPart1
                     }
                     //confirm the user that recipe has been reset
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;     //change text color to purple
-                    Console.WriteLine("Recipe has been reset to original values");
+                    Console.WriteLine("___ Recipe has been reset to original values ___");
 
-                    //fix error
-                    //clear console screen
+                    //clear console screen n/a
                     //Console.Clear();
                     break;
                 case "C":
@@ -255,10 +256,9 @@ internal class ProgramPart1
                     }
                     //confirm the user hat data has been cleared and can now enter a new recipe's details
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;       //change text color to purple
-                    Console.WriteLine("Data has been cleared. Enter new recipe details");
+                    Console.WriteLine("___ Data has been cleared. Enter new recipe details ___");
 
-                    //fix error
-                    //clear console screen
+                    //clear console screen n/a
                     //Console.Clear();
 
                     //call method so that user can begin again to follow the steps again to enter a new recpe
