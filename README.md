@@ -6,4 +6,5 @@ Note: These instructions are done in Microsoft Visual Studio Code
 3. Once in visual you will see code and look at the top navigation bar in the middle area, you will see a green play button
 4. Press the green play button to run the application
 
-Link to GitHub repository
+Link to GitHub repository:
+https://github.com/Zoe-Heyneke/Part1_POE.git
