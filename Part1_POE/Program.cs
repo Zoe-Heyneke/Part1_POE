@@ -52,6 +52,9 @@ internal class ProgramPart1
                 quantity = quantityIng,
                 unitsOfMeasurements = unitsMe,
             };
+            
+            //clear console screen
+            Console.Clear();
         }
 
         //ask user to enter the number of steps needed for the recipe and stored as numSteps
@@ -66,6 +69,9 @@ internal class ProgramPart1
             Console.WriteLine("Step " + (i + 1) + " : ");
             steps[i] = Console.ReadLine();
         }
+
+        ////clear console screen
+        Console.Clear();
 
         //create a new array to store original data entered by user
         //new array of original ingredients is set to equally assign to the array of ingredients stored by the user's input (user dat stored as original values to refer back to reset reipe to original values)
@@ -111,6 +117,9 @@ internal class ProgramPart1
                     {
                         Console.WriteLine("Step " + (i + 1) + ": " + steps[i]);
                     }
+                    //fix error
+                    //clear console screen
+                    Console.Clear();
                     break;
                 case "S":
                     //incorporate menu system for user to choose  scaling factor
@@ -167,6 +176,10 @@ internal class ProgramPart1
                             {
                                 Console.WriteLine(ingredient.name + ": " + ingredient.quantity + " " + ingredient.unitsOfMeasurements);
                             }
+
+                            //fix error
+                            //clear console screen
+                            Console.Clear();
                             break;
                         case "B":
                             //go back to main menu
@@ -187,6 +200,10 @@ internal class ProgramPart1
                     }
                     //confirm the user that recipe has been reset
                     Console.WriteLine("Recipe has been reset to original values");
+
+                    //fix error
+                    //clear console screen
+                    Console.Clear();
                     break;
                 case "C":
                     //clear data
@@ -202,6 +219,11 @@ internal class ProgramPart1
                     }
                     //confirm the user hat data has been cleared and can now enter a new recipe's details
                     Console.WriteLine("Data has been cleared. Enter new recipe details");
+
+                    //fix error
+                    //clear console screen
+                    Console.Clear();
+
                     //call method so that user can begin again to follow the steps again to enter a new recpe
                     RecipeDetails();
                     break;
