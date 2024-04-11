@@ -23,11 +23,33 @@ internal class ProgramPart1
         Console.ForegroundColor = ConsoleColor.White;       //change text color to white
         Console.WriteLine("***** Welcome to the Recipe Application *****");
         Console.WriteLine("Please enter the followig details for a single recipe");
+        
         //Ask the user the number of ingredients and read user's input stored as numIng
         Console.ForegroundColor = ConsoleColor.DarkMagenta;     //change text color to purple
         Console.WriteLine("Enter the number of ingredients: ");
         Console.ForegroundColor = ConsoleColor.White;       //change text color to white
         int numIng = Convert.ToInt32(Console.ReadLine());
+
+        //error handling
+        /*
+        while(true)
+        {
+            string input = Console.ReadLine();
+
+            if(int.TryParse(input, out numIng))
+            {
+                break;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;     //change text color to purple
+                Console.WriteLine("Invalid option entered, try again and enter a number from 1 to however many steps are required.");
+                Console.WriteLine("Enter the number of ingredients: ");
+                Console.ForegroundColor = ConsoleColor.White;       //change text color to white
+            }
+        }
+        */
+
         //Confirm with the user the number of ingredients entered
         Console.ForegroundColor = ConsoleColor.DarkMagenta;     //change text color to purple
         Console.WriteLine("Note: The number of ingredients chosen are: " + numIng);
@@ -46,11 +68,13 @@ internal class ProgramPart1
             Console.WriteLine("Enter the name of ingredient " + (i + 1) + ": ");
             Console.ForegroundColor = ConsoleColor.White;       //change text color to white
             string nameIng = Console.ReadLine();
+            
             //ask user to enter te quantity of the ingredient and store it as quantityIng
             Console.ForegroundColor = ConsoleColor.DarkMagenta;     //change text color to purple
             Console.WriteLine("Enter the quantity (amount in numbers) of the ingredient: ");
             Console.ForegroundColor = ConsoleColor.White;       //change text color to white
             double quantityIng = Convert.ToDouble(Console.ReadLine());
+            
             //ask user to enter the unit of measurement and store it as unitsMe
             Console.ForegroundColor = ConsoleColor.DarkMagenta;     //change text color to purple
             Console.WriteLine("Enter the unit of measurement (measurement in words - for example teaspoon, gram, cup) of the ingredient:");
